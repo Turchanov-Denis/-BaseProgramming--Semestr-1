@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define Size 5
+#define Size 6
 
 int printArr(int arr[Size][Size])
 {
@@ -20,7 +20,6 @@ int main(void)
     // change: the matrix is imaginary extended, filling occurs only if the condition is met
     for (int i = 1; i <= Size * 2; i++)
     {
-        printf("%d\n", i);
         if (i % 2 == 0)
         {
             int m = i;
@@ -31,7 +30,6 @@ int main(void)
                 {
                     arr[m-1][n-1] = counter;
                     counter++;
-                    printf("%d - %d\n", m + 1, n + 1);
                 }
 
                 m--;
@@ -49,7 +47,6 @@ int main(void)
                 {
                     arr[m-1][n-1] = counter;
                     counter++;
-                    printf("%d - %d\n", m + 1, n + 1);
                 }
 
                 m++;
