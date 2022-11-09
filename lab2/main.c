@@ -13,10 +13,12 @@ int calc(char string[])
         printf("Incorect expression down \n");
         return 0;
     }
-    // check view x=...
-    if ((string[0] == 'x') && (string[1] == '=') ) {
+    // check view x=... or ...+... = x
+    if (((string[0] == 'x') && (string[1] == '=')) || ((string[4] == 'x') && (string[3] == '=')) ) {
         int vars[] = {atoi(&string[2]),atoi(&string[4])};
-        switch (string[3])
+        if (string[4] == 'x') {vars[0] = atoi(&string[0]);vars[1] = atoi(&string[2]); }
+        int index = (string[4] == 'x') ? 1 : 3;
+        switch (string[index])
         {
         case '+':
             return vars[0] + vars[1];
