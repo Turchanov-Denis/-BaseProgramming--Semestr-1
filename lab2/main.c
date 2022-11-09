@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <errno.h>
 
 int calc(char string[])
 {
@@ -43,13 +42,11 @@ int calc(char string[])
         {
         case '+':
             return vars[0] - vars[1];
-
         case '-':
             if (string[2] == 'x') {return vars[1] - vars[0];}
            return vars[0] + vars[1];
         case '*':
             return vars[0] / vars[1];
-
         case '/':
         if (!vars[1]) {printf("Incorect expression \n"); return;};
            return vars[0] * vars[1];
