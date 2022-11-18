@@ -91,6 +91,33 @@ int abba(int arr[8])
              if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+2][j] == 'B') && (arrHex[i+2][j-1] == 'A') ) {
                 count++;
             }
+            // right - down - down 
+            if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+1][j+1] == 'B') && (arrHex[i+1][j+2] == 'A') ) {
+                count++;
+            }
+            // right - right - down 
+            if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+2][j] == 'B') && (arrHex[i+2][j+1] == 'A') ) {
+                count++;
+            }
+
+             // right - down - right 
+            if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+1][j+1] == 'B') && (arrHex[i+2][j+1] == 'A') ) {
+                count++;
+            }
+
+            // left - down - down 
+            if ((arrHex[i][j] == 'A') && (arrHex[i-1][j] == 'B') && (arrHex[i-1][j+1] == 'B') && (arrHex[i-1][j+2] == 'A') ) {
+                count++;
+            }
+            // left - right - down 
+            if ((arrHex[i][j] == 'A') && (arrHex[i-1][j] == 'B') && (arrHex[i-2][j] == 'B') && (arrHex[i-2][j+1] == 'A') ) {
+                count++;
+            }
+
+             // ledt - down - right 
+            if ((arrHex[i][j] == 'A') && (arrHex[i-1][j] == 'B') && (arrHex[i-1][j+1] == 'B') && (arrHex[i-2][j+1] == 'A') ) {
+                count++;
+            }
             
         }
     }
