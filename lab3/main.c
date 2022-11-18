@@ -63,77 +63,32 @@ int abba(int arr[8])
             
         }
     }
-    // down - right - right
-    for (int i = 0; i < 8; i++)
+     for (int i = 0; i < 8; i++)
     {
         for (int j = 0; j < 8; j++)
         {
+            // down - right - right
             if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+1][j+1] == 'B') && (arrHex[i+1][j+2] == 'A') ) {
                 count++;
             }
-            
-        }
-    }
-
-    // down - left - left
-
-    for (int i = 0; i < 8; i++)
-    {
-        for (int j = 0; j < 8; j++)
-        {
-            if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+1][j-1] == 'B') && (arrHex[i+1][j-2] == 'A') ) {
+             // down - left - left
+             if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+1][j-1] == 'B') && (arrHex[i+1][j+2] == 'A') ) {
                 count++;
             }
-            
-        }
-    }
-
-     // down - right - top
-
-    for (int i = 0; i < 8; i++)
-    {
-        for (int j = 0; j < 8; j++)
-        {
-            if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+1][j+1] == 'B') && (arrHex[i][j+1] == 'A') ) {
+            // down - right - top
+             if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+1][j+1] == 'B') && (arrHex[i][j+1] == 'A') ) {
                 count++;
             }
-            
-        }
-    }
-
-    // down - left - top
-
-    for (int i = 0; i < 8; i++)
-    {
-        for (int j = 0; j < 8; j++)
-        {
+            // down - left - top
             if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+1][j-1] == 'B') && (arrHex[i][j-1] == 'A') ) {
                 count++;
             }
-            
-        }
-    }
-
-     // down - down - right
-
-    for (int i = 0; i < 8; i++)
-    {
-        for (int j = 0; j < 8; j++)
-        {
+            // down - down - right
             if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+2][j] == 'B') && (arrHex[i+2][j+1] == 'A') ) {
                 count++;
             }
-            
-        }
-    }
-
-      // down - down - left
-
-    for (int i = 0; i < 8; i++)
-    {
-        for (int j = 0; j < 8; j++)
-        {
-            if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+2][j] == 'B') && (arrHex[i+2][j-1] == 'A') ) {
+             // down - down - left
+             if ((arrHex[i][j] == 'A') && (arrHex[i+1][j] == 'B') && (arrHex[i+2][j] == 'B') && (arrHex[i+2][j-1] == 'A') ) {
                 count++;
             }
             
