@@ -34,6 +34,13 @@ double polynom(char *expr, double x)
             {
                 // have
                 int coefficient = expr[i] - '0';
+                // if coefficient two-digit number
+                if (((expr[i + 1] - '0') >= 0) && ((expr[i + 1] - '0') <= 9))
+                {
+                    i++;
+                    coefficient = coefficient * 10 + (expr[i] - '0');
+                }
+
                 if (expr[i + 1] == '*') // check on just digital
                 {
                     i++;
@@ -79,6 +86,13 @@ double polynom(char *expr, double x)
             {
                 // have
                 int coefficient = expr[i] - '0';
+                // if coefficient two-digit number
+                if (((expr[i + 1] - '0') >= 0) && ((expr[i + 1] - '0') <= 9))
+                {
+                    i++;
+                    coefficient = coefficient * 10 + (expr[i] - '0');
+                }
+
                 if (expr[i + 1] == '*') // check on just digital
                 {
                     i++;
@@ -124,6 +138,13 @@ double polynom(char *expr, double x)
             {
                 // have
                 int coefficient = expr[i] - '0';
+                // if coefficient two-digit number
+                if (((expr[i + 1] - '0') >= 0) && ((expr[i + 1] - '0') <= 9))
+                {
+                    i++;
+                    coefficient = coefficient * 10 + (expr[i] - '0');
+                }
+
                 if (expr[i + 1] == '*') // check on just digital
                 {
                     i++;
@@ -150,13 +171,13 @@ double polynom(char *expr, double x)
         }
     }
 
-    printf("%f", count);
+    // printf("%f", count);
+    return count;
 }
 
 int main()
 {
-    char *expr = "-2+5*x^3+x";
+    char *expr = "-14+10*x^3+x";
     double x = 3.0;
-    polynom(expr, x);
-    // printf(" y(% f) = % s returns % f ", x, expr, polynom(expr, x));
+    printf(" y(% f) = % s returns % f ", x, expr, polynom(expr, x));
 }
