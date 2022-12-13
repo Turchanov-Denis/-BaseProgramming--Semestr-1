@@ -45,7 +45,7 @@ float traverse_clockwise(float coord[], int n)
     {
         for (int j = 0; j < n - i - 1; j++)
         {
-            if ((array[j].y < array[j + 1].y) && (array[j].x < array[j + 1].x))
+            if ((array[j].y < array[j + 1].y) || (array[j].x < array[j + 1].x))
             {
                 Vertex tmp = array[j];
                 array[j] = array[j + 1];
